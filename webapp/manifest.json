@@ -50,6 +50,7 @@
         "sap.m": {},
         "sap.ui.core": {},
         "sap.f": {},
+        "sap.suite.ui.microchart": {},
         "sap.suite.ui.generic.template": {},
         "sap.ui.comp": {},
         "sap.ui.generic.app": {},
@@ -104,6 +105,13 @@
           "target": [
             "TargetApp"
           ]
+        },
+        {
+          "name": "RouteSensors",
+          "pattern": "",
+          "target": [
+            "TargetSensors"
+          ]
         }
       ],
       "targets": {
@@ -113,6 +121,13 @@
           "clearControlAggregation": false,
           "viewId": "App",
           "viewName": "App"
+        },
+        "TargetSensors": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Sensors",
+          "viewName": "Sensors"
         }
       }
     },
