@@ -1,11 +1,22 @@
 <mvc:View
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:grid="sap.ui.layout.grid"
     displayBlock="true">
     <Page id="page" title="{i18n>title}">
         <content>
             <IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
                 <content>
+                    <f:GridList id="sensorsList" noDataText="No sensors">
+                        <f:customLayout>
+                        <grid:GridBoxLayout/>
+                            </f:customLayout>
+                            <f:items>
+                            <CustomListItem>
+                            </CustomListItem>
+                            </f:items>
+                    </f:GridList>
                 </content>
             </IconTabBar>
         </content>

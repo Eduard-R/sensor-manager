@@ -23,6 +23,10 @@
           "localUri": "localService/metadata.xml",
           "odataVersion": "4.0"
         }
+      },
+      "sensorSource": {
+        "type": "JSON",
+        "uri": "./localService/sensors.json"
       }
     }
   },
@@ -79,6 +83,10 @@
           "earlyRequests": true,
           "groupId": "$direct"
         }
+      },
+      "sensorModel": {
+        "type": "sap.ui.model.json.JSONModel",
+        "dataSource": "sensorSource"
       }
     },
     "resources": {
