@@ -2,18 +2,19 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m"
     xmlns:f="sap.f"
-    xmlns:grid="sap.ui.layout.grid"
+    xmlns:grid="sap.ui.layout.cssgrid"
     displayBlock="true">
     <Page id="page" title="{i18n>title}">
         <content>
             <IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
                 <content>
-                    <f:GridList id="sensorsList" noDataText="No sensors">
+                    <f:GridList id="sensorsList" noDataText="No sensors" items="{path: 'sensorModel>/sensors', sorter: {path: 'customer', group:true, descending: false}}">
                         <f:customLayout>
                         <grid:GridBoxLayout/>
                             </f:customLayout>
                             <f:items>
                             <CustomListItem>
+                                <Title text="{sensorModel>location}"/>
                             </CustomListItem>
                             </f:items>
                     </f:GridList>
