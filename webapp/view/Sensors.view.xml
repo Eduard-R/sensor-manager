@@ -8,7 +8,14 @@
     displayBlock="true">
     <Page id="page" title="{i18n>title}">
         <content>
-            <IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+            <IconTabBar id="idIconTabBar" class="sapUiResponsiveContentPadding">
+                <items>
+                    <IconTabFilter showAll="true" text="{i18n>msgFilterAll}" key="All"/>
+                    <IconTabSeparator/>
+                    <IconTabFilter icon="sap-icon://fridge" iconColor="Default" text="{i18n>msgFilterCold}" key="Cold"/>
+                    <IconTabFilter icon="sap-icon://blur" iconColor="Critical" text="{i18n>msgFilterWarm}" key="Warm"/>
+                    <IconTabFilter icon="sap-icon://warning" iconColor="Negative" text="{i18n>msgFilterHot}" key="Hot"/>
+                </items>
                 <content>
                     <f:GridList id="sensorsList" noDataText="{i18n>noSensorDataText}" items="{path: 'sensorModel>/sensors', sorter: {path: 'customer', group:true, descending: false}}">
                         <f:customLayout>
