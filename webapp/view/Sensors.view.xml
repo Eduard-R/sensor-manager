@@ -8,7 +8,7 @@
         <content>
             <IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
                 <content>
-                    <f:GridList id="sensorsList" noDataText="No sensors" items="{path: 'sensorModel>/sensors', sorter: {path: 'customer', group:true, descending: false}}">
+                    <f:GridList id="sensorsList" noDataText="{i18n>noSensorDataText}" items="{path: 'sensorModel>/sensors', sorter: {path: 'customer', group:true, descending: false}}">
                         <f:customLayout>
                         <grid:GridBoxLayout/>
                             </f:customLayout>
