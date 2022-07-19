@@ -7,7 +7,7 @@ sap.ui.define([
 ], function (Controller, IconColor, MessageToast, Filter, Fragment) {
     "use strict";
 
-    return Controller.extend("keepcool.SensorManager.controller.Sensors", {
+    return Controller.extend("keepcool.sensormanager.controller.Sensors", {
         onInit: function () {
             this._aCustomerFilters = [];
             this._aStatusFilters = [];
@@ -77,6 +77,10 @@ sap.ui.define([
                 return new Filter("customer", "EQ", oItem.getTitle());
             });
             oBinding.filter(this._aCustomerFilters.concat(this._aStatusFilters));
+        },
+        navToSensorStatus: function (oEvent) {
+            var iSensorIndex = oEvent.getSource().getBindingContext("sensorModel").getProperty("index");
+            this.getOwnerComponent().getRouter().navTo("RouteSensorStatus", { index: iSensorIndex });
         }
     });
 });

@@ -125,6 +125,13 @@
           "target": [
             "TargetSensors"
           ]
+        },
+        {
+          "name": "RouteSensorStatus",
+          "pattern": "sensor/{index}",
+          "target": [
+            "TargetSensorStatus"
+          ]
         }
       ],
       "targets": {
@@ -141,6 +148,11 @@
           "clearControlAggregation": false,
           "viewId": "Sensors",
           "viewName": "Sensors"
+        },
+        "TargetSensorStatus": {
+          "viewId": "sensorStatus",
+          "viewName": "SensorStatus",
+          "viewLevel": 2
         }
       }
     },

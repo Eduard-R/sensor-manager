@@ -1,8 +1,8 @@
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "keepcool/sensormanager/model/models"
-    ],
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "keepcool/sensormanager/model/models"
+],
     function (UIComponent, Device, models) {
         "use strict";
 
