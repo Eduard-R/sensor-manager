@@ -7,6 +7,9 @@
     xmlns:grid="sap.ui.layout.cssgrid"
     displayBlock="true">
     <Page id="page" title="{i18n>title}">
+    <headerContent>
+        <Button icon="sap-icon://menu" press=".onCustomerSelect" tooltip="{i18n>toolTipSelectCustomer}"/>
+    </headerContent>
         <content>
             <IconTabBar id="idIconTabBar" select=".onSensorSelect" class="sapUiResponsiveContentPadding">
                 <items>
